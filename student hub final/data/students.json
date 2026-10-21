@@ -1,0 +1,56 @@
+﻿[
+  {
+    "id": 101,
+    "name": "Jeet Patel",
+    "enrollment": "25DCS038",
+    "branch": "Computer Engineering",
+    "semester": 3,
+    "cgpa": 8.75,
+    "email": "jeet.p@example.com"
+  },
+  {
+    "id": 102,
+    "name": "Aarav Sharma",
+    "enrollment": "25DCS012",
+    "branch": "Computer Engineering",
+    "semester": 3,
+    "cgpa": 9.10,
+    "email": "aarav.s@example.com"
+  },
+  {
+    "id": 103,
+    "name": "Diya Joshi",
+    "enrollment": "25DIT045",
+    "branch": "Information Technology",
+    "semester": 3,
+    "cgpa": 8.90,
+    "email": "diya.j@example.com"
+  },
+  {
+    "id": 104,
+    "name": "Rohan Mehta",
+    "enrollment": "25DEC020",
+    "branch": "Electronics & Communication",
+    "semester": 3,
+    "cgpa": 7.80,
+    "email": "rohan.m@example.com"
+  },
+  {
+    "id": 105,
+    "name": "Pooja Shah",
+    "enrollment": "25DIT060",
+    "branch": "Information Technology",
+    "semester": 3,
+    "cgpa": 9.35,
+    "email": "pooja.s@example.com"
+  },
+  {
+    "id": 106,
+    "name": "Karan Verma",
+    "enrollment": "25DME015",
+    "branch": "Mechanical Engineering",
+    "semester": 3,
+    "cgpa": 8.20,
+    "email": "karan.v@example.com"
+  }
+]

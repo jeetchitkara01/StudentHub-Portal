@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+    <header>
+    <div class="container">
+      <div class="header-top">
+        <h1>StudentHub Portal</h1>
+        <div class="header-actions">
+          <button id="themeToggleBtn" class="theme-toggle-btn" type="button">Dark Mode</button>
+          <button id="hamburgerBtn" class="hamburger-btn" type="button" aria-label="Toggle navigation">☰ Menu</button>
+        </div>
+      </div>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="directory.html">Student Directory</a>
+        <a href="register.html">Register (PHP POST)</a>
+        <a href="view_submissions.html">View Submissions</a>
+        <a href="courses.html">Courses</a>
+        <a href="results.html">Results</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html" class="active">Login</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <div class="form-box" style="max-width:400px;">
+      <h2>Student Login</h2>
+      <form action="dashboard.html" method="get">
+        <label for="loginUser">Enrollment Number / Email:</label>
+        <input type="text" id="loginUser" placeholder="Enter enrollment or email" required>
+
+        <label for="loginPass">Password:</label>
+        <input type="password" id="loginPass" placeholder="Enter password" required>
+
+        <button type="submit" class="btn" style="width:100%; margin-top:10px;">Login to Dashboard</button>
+      </form>
+      <p style="margin-top:12px; text-align:center;"><a href="register.html">New Student? Register Here</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2026 StudentHub Portal | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+    <header>
+    <div class="container">
+      <div class="header-top">
+        <h1>StudentHub Portal</h1>
+        <div class="header-actions">
+          <button id="themeToggleBtn" class="theme-toggle-btn" type="button">Dark Mode</button>
+          <button id="hamburgerBtn" class="hamburger-btn" type="button" aria-label="Toggle navigation">☰ Menu</button>
+        </div>
+      </div>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="directory.html">Student Directory</a>
+        <a href="register.html">Register (PHP POST)</a>
+        <a href="view_submissions.html">View Submissions</a>
+        <a href="courses.html">Courses</a>
+        <a href="results.html">Results</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Login</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <div class="box">
+      <h2>Welcome, Student!</h2>
+      <p>Enrollment: <strong>25DCS038</strong> | Branch: <strong>Computer Engineering</strong> (Semester 3)</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="box" style="text-align:center;">
+        <h4>Enrolled Courses</h4>
+        <p style="font-size:24px; font-weight:bold; color:var(--btn-bg); margin:5px 0;">4</p>
+      </div>
+      <div class="box" style="text-align:center;">
+        <h4>Overall Attendance</h4>
+        <p style="font-size:24px; font-weight:bold; color:#10b981; margin:5px 0;">92%</p>
+      </div>
+      <div class="box" style="text-align:center;">
+        <h4>Current CGPA</h4>
+        <p style="font-size:24px; font-weight:bold; color:#0369a1; margin:5px 0;">8.75</p>
+      </div>
+    </div>
+
+    <div class="flex-row">
+      <div class="box" style="flex:1;">
+        <h3>Latest Announcements</h3>
+        <ul>
+          <li>Mid-Sem Exam commences October 15.</li>
+          <li>Submit laboratory practical files on time.</li>
+        </ul>
+      </div>
+      <div class="box" style="flex:1;">
+        <h3>Recent Activity</h3>
+        <ul>
+          <li>Registered for Tech Fest 2026.</li>
+          <li>Checked Semester 3 Result Grade Card.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2026 StudentHub Portal | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

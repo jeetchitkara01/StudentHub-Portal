@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Results</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+    <header>
+    <div class="container">
+      <div class="header-top">
+        <h1>StudentHub Portal</h1>
+        <div class="header-actions">
+          <button id="themeToggleBtn" class="theme-toggle-btn" type="button">Dark Mode</button>
+          <button id="hamburgerBtn" class="hamburger-btn" type="button" aria-label="Toggle navigation">☰ Menu</button>
+        </div>
+      </div>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="directory.html">Student Directory</a>
+        <a href="register.html">Register (PHP POST)</a>
+        <a href="view_submissions.html">View Submissions</a>
+        <a href="courses.html">Courses</a>
+        <a href="results.html" class="active">Results</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Login</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <div class="box">
+      <h2>Semester Results & Grade Sheet</h2>
+      <p><strong>Student Name:</strong> Jeet Patel | <strong>Enrollment:</strong> 25DCS038 | <strong>Semester:</strong> 3</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Marks (Out of 100)</th>
+            <th>Grade</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data Structures and Algorithms</td>
+            <td>84</td>
+            <td>A</td>
+            <td><span style="color:#10b981; font-weight:bold;">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Database Management Systems</td>
+            <td>85</td>
+            <td>A</td>
+            <td><span style="color:#10b981; font-weight:bold;">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Web Technology</td>
+            <td>86</td>
+            <td>A</td>
+            <td><span style="color:#10b981; font-weight:bold;">PASS</span></td>
+          </tr>
+          <tr>
+            <td>Operating Systems</td>
+            <td>87</td>
+            <td>A</td>
+            <td><span style="color:#10b981; font-weight:bold;">PASS</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="summary-box">
+        Total Credits Earned: 20 &nbsp;|&nbsp; SPI: 8.50 &nbsp;|&nbsp; CGPA: 8.75
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2026 StudentHub Portal | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

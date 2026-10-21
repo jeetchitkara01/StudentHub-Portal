@@ -1,0 +1,122 @@
+﻿[
+  {
+    "id": 1,
+    "title": "Annual Tech Fest 2026",
+    "category": "Technical",
+    "date": "2026-10-15",
+    "venue": "Main Auditorium",
+    "organizer": "Computer Engineering Dept",
+    "description": "Inter-college technical symposium featuring robotics, project exhibitions, and coding challenges.",
+    "status": "Upcoming"
+  },
+  {
+    "id": 2,
+    "title": "24-Hour Coding Hackathon",
+    "category": "Technical",
+    "date": "2026-10-20",
+    "venue": "Computer Lab 3",
+    "organizer": "Coding Club",
+    "description": "Build innovative web and mobile apps within 24 hours. Cash prizes for top teams!",
+    "status": "Upcoming"
+  },
+  {
+    "id": 3,
+    "title": "Inter-Department Cricket Tournament",
+    "category": "Sports",
+    "date": "2026-10-25",
+    "venue": "University Sports Ground",
+    "organizer": "Sports Council",
+    "description": "Annual cricket championship with teams from CE, IT, ME, EC, and Civil departments.",
+    "status": "Upcoming"
+  },
+  {
+    "id": 4,
+    "title": "Workshop on Cloud & Web Technologies",
+    "category": "Workshops",
+    "date": "2026-11-02",
+    "venue": "Seminar Hall A",
+    "organizer": "IT Department",
+    "description": "Hands-on session on frontend frameworks, REST APIs, and cloud deployments.",
+    "status": "Upcoming"
+  },
+  {
+    "id": 5,
+    "title": "Annual Cultural Night - Spandan",
+    "category": "Cultural",
+    "date": "2026-11-10",
+    "venue": "Open Air Theatre",
+    "organizer": "Cultural Committee",
+    "description": "Music performances, drama, dance shows, and art exhibitions by students.",
+    "status": "Upcoming"
+  },
+  {
+    "id": 6,
+    "title": "AI & Robotics Summit",
+    "category": "Technical",
+    "date": "2026-11-18",
+    "venue": "Conference Hall B",
+    "organizer": "Robotics Club",
+    "description": "Keynotes from industry leaders on Machine Learning, Autonomous Systems, and Automation.",
+    "status": "Upcoming"
+  },
+  {
+    "id": 7,
+    "title": "Badminton & Table Tennis Championship",
+    "category": "Sports",
+    "date": "2026-11-22",
+    "venue": "Indoor Sports Complex",
+    "organizer": "Sports Council",
+    "description": "Singles and doubles tournaments for all students and faculty members.",
+    "status": "Upcoming"
+  },
+  {
+    "id": 8,
+    "title": "Ethical Hacking & Cyber Security Workshop",
+    "category": "Workshops",
+    "date": "2026-11-28",
+    "venue": "Lab 5",
+    "organizer": "Cyber Cell",
+    "description": "Practical workshop covering network security, penetration testing basics, and OWASP standards.",
+    "status": "Upcoming"
+  },
+  {
+    "id": 9,
+    "title": "Youth Photography & Short Film Contest",
+    "category": "Cultural",
+    "date": "2026-12-05",
+    "venue": "Media Center",
+    "organizer": "Photography Club",
+    "description": "Campus photography exhibition and short documentary screenings.",
+    "status": "Upcoming"
+  },
+  {
+    "id": 10,
+    "title": "Web Development Bootcamp",
+    "category": "Workshops",
+    "date": "2026-12-12",
+    "venue": "Online / Lab 2",
+    "organizer": "Developer Student Club",
+    "description": "Full-day practical training on HTML5, CSS Grid, JavaScript DOM, and Fetch API.",
+    "status": "Upcoming"
+  },
+  {
+    "id": 11,
+    "title": "Athletics Track Meet",
+    "category": "Sports",
+    "date": "2026-12-18",
+    "venue": "Main Stadium",
+    "organizer": "Sports Council",
+    "description": "100m, 400m sprint, relay race, long jump, and shot put competitions.",
+    "status": "Upcoming"
+  },
+  {
+    "id": 12,
+    "title": "Start-up Pitch & Entrepreneurship Day",
+    "category": "Technical",
+    "date": "2026-12-22",
+    "venue": "Innovation Hub",
+    "organizer": "E-Cell",
+    "description": "Student entrepreneurs present startup ideas to angel investors and mentors.",
+    "status": "Upcoming"
+  }
+]

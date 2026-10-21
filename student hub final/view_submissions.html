@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - View Stored Submissions</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <h1>StudentHub Portal</h1>
+        <div class="header-actions">
+          <button id="themeToggleBtn" class="theme-toggle-btn" type="button">Dark Mode</button>
+          <button id="hamburgerBtn" class="hamburger-btn" type="button" aria-label="Toggle navigation">☰ Menu</button>
+        </div>
+      </div>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="directory.html">Student Directory</a>
+        <a href="register.html">Register (PHP POST)</a>
+        <a href="view_submissions.html" class="active">View Submissions</a>
+        <a href="courses.html">Courses</a>
+        <a href="results.html">Results</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Login</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <div class="box">
+      <h2>Stored Student Registrations (CSV & JSON File Storage)</h2>
+      <p>This table displays student registration records stored on the server in <strong>data/registrations.json</strong> and <strong>data/registrations.csv</strong>.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Full Name</th>
+            <th>Enrollment</th>
+            <th>Department</th>
+            <th>Semester</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Gender</th>
+          </tr>
+        </thead>
+        <tbody id="submissionsTableBody">
+          <tr>
+            <td>2026-09-25 10:00:00</td>
+            <td><strong>Jeet Patel</strong></td>
+            <td>25DCS038</td>
+            <td>Computer Engineering</td>
+            <td>Semester 3</td>
+            <td>jeet.p@example.com</td>
+            <td>9876543210</td>
+            <td>Male</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top: 15px; display:flex; gap:10px;">
+        <a href="register.html" class="btn">Register New Student</a>
+        <a href="view_submissions.php" class="btn" style="background:#64748b;">Open in PHP Server Mode</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2026 StudentHub Portal | Practical 7</p>
+  </footer>
+
+  <script>
+
+    fetch('data/registrations.json')
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.length > 0) {
+          const tbody = document.getElementById('submissionsTableBody');
+          tbody.innerHTML = data.map(row => 
+            <tr>
+              <td></td>
+              <td><strong></strong></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          ).join('');
+        }
+      })
+      .catch(err => console.log("Static preview mode active:", err));
+  </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Register (PHP Form Processing)</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <h1>StudentHub Portal</h1>
+        <div class="header-actions">
+          <button id="themeToggleBtn" class="theme-toggle-btn" type="button">Dark Mode</button>
+          <button id="hamburgerBtn" class="hamburger-btn" type="button" aria-label="Toggle navigation">☰ Menu</button>
+        </div>
+      </div>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="directory.html">Student Directory</a>
+        <a href="register.html" class="active">Register (PHP POST)</a>
+        <a href="view_submissions.html">View Submissions</a>
+        <a href="courses.html">Courses</a>
+        <a href="results.html">Results</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Login</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <div class="form-box" style="max-width: 540px;">
+      <h2>Student Registration Form</h2>
+      <p>Submits data to <strong>process_register.php</strong> with server-side validation and CSV/JSON storage.</p>
+
+      <form action="process_register.php" method="POST">
+
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" name="fullName" placeholder="e.g. Jeet Patel" required>
+
+        <label for="enrollment">Enrollment Number *</label>
+        <input type="text" id="enrollment" name="enrollment" placeholder="e.g. 25DCS038" required>
+
+        <label for="department">Department *</label>
+        <select id="department" name="department" required>
+          <option value="">-- Select Department --</option>
+          <option value="Computer Engineering">Computer Engineering</option>
+          <option value="Information Technology">Information Technology</option>
+          <option value="Electronics & Communication">Electronics & Communication</option>
+          <option value="Mechanical Engineering">Mechanical Engineering</option>
+        </select>
+
+        <label for="semester">Semester *</label>
+        <select id="semester" name="semester" required>
+          <option value="">-- Select Semester --</option>
+          <option value="Semester 1">Semester 1</option>
+          <option value="Semester 2">Semester 2</option>
+          <option value="Semester 3" selected>Semester 3</option>
+          <option value="Semester 4">Semester 4</option>
+        </select>
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="student@example.com" required>
+
+        <label for="mobile">Mobile Number (10 Digits) *</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="9876543210" maxlength="10" required>
+
+        <label for="password">Password (Min 8 characters) *</label>
+        <input type="password" id="password" name="password" placeholder="Create password" required>
+
+        <label for="confirmPassword">Confirm Password *</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
+
+        <label style="display:block; margin-top:10px;">Gender *</label>
+        <div style="display:flex; gap:15px; margin-bottom:12px;">
+          <label><input type="radio" name="gender" value="Male" checked> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+
+        <div style="margin-bottom:15px;">
+          <input type="checkbox" id="terms" name="terms" required checked>
+          <label for="terms" style="display:inline;"> I accept the Terms and Conditions *</label>
+        </div>
+
+        <button type="submit" class="btn" style="width:100%;">Submit Form via PHP (POST)</button>
+      </form>
+
+      <p style="margin-top:12px; text-align:center;">
+        <a href="view_submissions.html">View Saved Submissions</a>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2026 StudentHub Portal | Practical 7</p>
+  </footer>
+</body>
+</html>

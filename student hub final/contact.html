@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+    <header>
+    <div class="container">
+      <div class="header-top">
+        <h1>StudentHub Portal</h1>
+        <div class="header-actions">
+          <button id="themeToggleBtn" class="theme-toggle-btn" type="button">Dark Mode</button>
+          <button id="hamburgerBtn" class="hamburger-btn" type="button" aria-label="Toggle navigation">☰ Menu</button>
+        </div>
+      </div>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="directory.html">Student Directory</a>
+        <a href="register.html">Register (PHP POST)</a>
+        <a href="view_submissions.html">View Submissions</a>
+        <a href="courses.html">Courses</a>
+        <a href="results.html">Results</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Login</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <div class="flex-row">
+      <div class="box" style="flex:1;">
+        <h2>Contact / Inquiries</h2>
+        <form action="index.html" method="get">
+          <label for="cName">Your Name:</label>
+          <input type="text" id="cName" placeholder="Enter full name" required>
+
+          <label for="cEmail">Email Address:</label>
+          <input type="email" id="cEmail" placeholder="Enter email" required>
+
+          <label for="cSubject">Subject:</label>
+          <input type="text" id="cSubject" placeholder="Inquiry topic" required>
+
+          <label for="cMessage">Message:</label>
+          <textarea id="cMessage" rows="4" placeholder="Write your message..." required></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+
+      <div class="box" style="flex:1;">
+        <h2>Campus Support Info</h2>
+        <p><strong>StudentHub Portal HQ</strong></p>
+        <p>University Campus Road, Academic Block A</p>
+        <p>CHARUSAT University Campus, Changa, Gujarat</p>
+        <br>
+        <p><strong>Phone:</strong> +91 (800) 123-4567</p>
+        <p><strong>Email:</strong> support@studenthub.edu</p>
+        <p><strong>Office Hours:</strong> Mon - Fri: 9:00 AM - 5:00 PM</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2026 StudentHub Portal | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

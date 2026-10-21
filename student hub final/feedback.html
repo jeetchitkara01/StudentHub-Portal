@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="container header-top">
+        <div>
+            <h1>StudentHub Portal</h1>
+            <p style="margin: 2px 0 0 0; font-size: 13px; opacity: 0.9;">Academic & Campus Activity Hub</p>
+        </div>
+        <div class="header-actions">
+            <button id="themeToggleBtn" class="theme-toggle-btn" type="button">Dark Mode</button>
+            <button id="hamburgerBtn" class="hamburger-btn" type="button" aria-label="Toggle navigation">☰ Menu</button>
+        </div>
+    </div>
+</header>
+
+<nav id="mainNav">
+    <div class="container nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="directory.html">Directory</a>
+        <a href="courses.html">Courses</a>
+        <a href="results.html">Results</a>
+        <a href="faq.html">FAQ</a>
+        <a href="feedback.html" class="active">Feedback</a>
+        <a href="contact.html">Contact</a>
+        <a href="register.html">Register</a>
+        <a href="login.php" class="nav-btn-highlight">Login</a>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="box form-container" style="max-width: 550px; margin: 30px auto;">
+        <h2>Campus Feedback & Suggestions</h2>
+        <p>Share your ideas, suggestions, or grievance with department coordinators.</p>
+
+        <form action="process_contact.php" method="POST">
+            <div class="form-group">
+                <label for="name">Your Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Full Name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="name@studenthub.edu">
+            </div>
+
+            <div class="form-group">
+                <label for="category">Feedback Category</label>
+                <select id="category" name="subject">
+                    <option value="Academic Curriculum">Academic Curriculum</option>
+                    <option value="Lab & Infrastructure">Lab & Infrastructure</option>
+                    <option value="Events & Extra-curricular">Events & Extra-curricular</option>
+                    <option value="General Suggestion">General Suggestion</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Detailed Feedback</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Write your feedback..."></textarea>
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%;">Submit Feedback</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <p>StudentHub Portal &copy; 2026. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Academic & Campus Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+<div id="noticeBanner" class="container" style="margin-top: 15px; margin-bottom: 0;">
+    <div style="background: #2563eb; color: #ffffff; padding: 10px 16px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center;">
+        <span><strong>Notice:</strong> Mid-Semester examinations and Tech Symposium registrations are now live!</span>
+        <button id="closeBannerBtn" style="background: none; border: 1px solid #ffffff; color: #ffffff; border-radius: 4px; padding: 2px 8px; cursor: pointer;">Dismiss</button>
+    </div>
+</div>
+
+<header>
+    <div class="container header-top">
+        <div>
+            <h1>StudentHub Portal</h1>
+            <p style="margin: 2px 0 0 0; font-size: 13px; opacity: 0.9;">Academic & Campus Activity Hub</p>
+        </div>
+        <div class="header-actions">
+            <button id="themeToggleBtn" class="theme-toggle-btn" type="button">Dark Mode</button>
+            <button id="hamburgerBtn" class="hamburger-btn" type="button" aria-label="Toggle navigation">☰ Menu</button>
+        </div>
+    </div>
+</header>
+
+<nav id="mainNav">
+    <div class="container nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="directory.html">Directory</a>
+        <a href="courses.html">Courses</a>
+        <a href="results.html">Results</a>
+        <a href="faq.html">FAQ</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact</a>
+        <a href="register.html">Register</a>
+        <a href="login.php" class="nav-btn-highlight">Login</a>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="box" style="margin-top: 20px;">
+        <h2>Welcome to StudentHub University Portal</h2>
+        <p>Your unified digital campus gateway for course registration, exam results, student directories, campus events, and academic announcements.</p>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
+            <a href="register.html" class="btn">New Student Registration</a>
+            <a href="login.php" class="btn" style="background: #2563eb;">Portal Sign In</a>
+            <button type="button" id="openModalBtn" class="btn" style="background: #059669;">Important Announcements</button>
+        </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+        <div class="box">
+            <h3>Academic Services</h3>
+            <ul style="line-height: 1.9; padding-left: 20px;">
+                <li><a href="courses.html"><strong>Course Catalog:</strong></a> View department syllabus, credits, and elective courses</li>
+                <li><a href="results.html"><strong>Examination Results:</strong></a> Check semester grades, SGPA, and performance cards</li>
+                <li><a href="directory.html"><strong>Student Directory:</strong></a> Browse peer contacts and department student lists</li>
+                <li><a href="feedback.html"><strong>Academic Feedback:</strong></a> Submit suggestions and curriculum reviews</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h3>Campus Life & Activities</h3>
+            <ul style="line-height: 1.9; padding-left: 20px;">
+                <li><a href="events.html"><strong>Upcoming Events:</strong></a> Explore technical symposiums, workshops, and sports</li>
+                <li><a href="faq.html"><strong>Student FAQs:</strong></a> Answers to common campus and portal questions</li>
+                <li><a href="contact.html"><strong>Helpdesk & Support:</strong></a> Connect with faculty advisors and administration</li>
+                <li><a href="register.html"><strong>Event Participation:</strong></a> Register and reserve seats for campus activities</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="box">
+        <h3>Featured Campus Events</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 12px;">
+            <div style="border: 1px solid var(--card-border); padding: 12px; border-radius: 6px;">
+                <strong>Annual Tech Symposium 2026</strong>
+                <p style="font-size: 13px; margin: 5px 0;">Robotics competition, coding hackathons, and AI research paper presentations.</p>
+                <span class="badge badge-info">Technical</span>
+            </div>
+            <div style="border: 1px solid var(--card-border); padding: 12px; border-radius: 6px;">
+                <strong>Cultural Night & Tarang</strong>
+                <p style="font-size: 13px; margin: 5px 0;">Inter-college music concerts, drama performances, and art exhibitions.</p>
+                <span class="badge badge-success">Cultural</span>
+            </div>
+            <div style="border: 1px solid var(--card-border); padding: 12px; border-radius: 6px;">
+                <strong>University Sports Championship</strong>
+                <p style="font-size: 13px; margin: 5px 0;">Inter-department cricket tournaments, football league, and track athletics.</p>
+                <span class="badge badge-info">Sports</span>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div id="quickModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 999; align-items: center; justify-content: center;">
+    <div class="box" style="max-width: 480px; width: 90%; margin: auto; background: var(--card-bg); position: relative;">
+        <h3>Important Campus Announcement</h3>
+        <p>Mid-Semester examinations for the 3rd semester will commence next week. Please verify your course enrollments before the registration deadline.</p>
+        <div style="text-align: right; margin-top: 15px;">
+            <button type="button" id="closeModalBtn" class="btn" style="background: #2563eb;">Got it</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container footer-content">
+        <p>StudentHub Portal &copy; 2026. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Student Directory</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+    <header>
+    <div class="container">
+      <div class="header-top">
+        <h1>StudentHub Portal</h1>
+        <div class="header-actions">
+          <button id="themeToggleBtn" class="theme-toggle-btn" type="button">Dark Mode</button>
+          <button id="hamburgerBtn" class="hamburger-btn" type="button" aria-label="Toggle navigation">☰ Menu</button>
+        </div>
+      </div>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="directory.html" class="active">Student Directory</a>
+        <a href="register.html">Register (PHP POST)</a>
+        <a href="view_submissions.html">View Submissions</a>
+        <a href="courses.html">Courses</a>
+        <a href="results.html">Results</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Login</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <div class="page-intro">
+      <h2>Student Directory</h2>
+      <p>Fetches student records dynamically from external JSON with real-time search and branch filter.</p>
+    </div>
+
+    <div class="controls-box">
+      <div class="control-item" style="flex: 2;">
+        <label for="studentSearch">Search Student Name or Enrollment:</label>
+        <input type="text" id="studentSearch" placeholder="Type student name or ID...">
+      </div>
+
+      <div class="control-item">
+        <label for="branchFilter">Filter Branch:</label>
+        <select id="branchFilter">
+          <option value="all">All Branches</option>
+          <option value="Computer Engineering">Computer Engineering</option>
+          <option value="Information Technology">Information Technology</option>
+          <option value="Electronics & Communication">Electronics & Communication</option>
+          <option value="Mechanical Engineering">Mechanical Engineering</option>
+        </select>
+      </div>
+    </div>
+
+    <table id="studentsTable">
+      <thead>
+        <tr>
+          <th>Enrollment</th>
+          <th>Student Name</th>
+          <th>Branch / Department</th>
+          <th>Semester</th>
+          <th>CGPA</th>
+          <th>Email Address</th>
+        </tr>
+      </thead>
+      <tbody id="studentsTableBody">
+        <tr><td colspan="6" style="text-align:center;">Loading student records...</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2026 StudentHub Portal | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    let allStudents = [];
+    const fallbackStudents = [
+      { id: 101, name: "Jeet Patel", enrollment: "25DCS038", branch: "Computer Engineering", semester: 3, cgpa: 8.75, email: "jeet.p@example.com" },
+      { id: 102, name: "Aarav Sharma", enrollment: "25DCS012", branch: "Computer Engineering", semester: 3, cgpa: 9.10, email: "aarav.s@example.com" },
+      { id: 103, name: "Diya Joshi", enrollment: "25DIT045", branch: "Information Technology", semester: 3, cgpa: 8.90, email: "diya.j@example.com" },
+      { id: 104, name: "Rohan Mehta", enrollment: "25DEC020", branch: "Electronics & Communication", semester: 3, cgpa: 7.80, email: "rohan.m@example.com" },
+      { id: 105, name: "Pooja Shah", enrollment: "25DIT060", branch: "Information Technology", semester: 3, cgpa: 9.35, email: "pooja.s@example.com" },
+      { id: 106, name: "Karan Verma", enrollment: "25DME015", branch: "Mechanical Engineering", semester: 3, cgpa: 8.20, email: "karan.v@example.com" }
+    ];
+
+    async function loadStudents() {
+      try {
+        const res = await fetch("data/students.json");
+        if (!res.ok) throw new Error("Status: " + res.status);
+        allStudents = await res.json();
+      } catch (err) {
+        allStudents = fallbackStudents;
+      }
+      renderStudentsTable();
+    }
+
+    function renderStudentsTable() {
+      const searchVal = document.getElementById("studentSearch").value.toLowerCase().trim();
+      const branchVal = document.getElementById("branchFilter").value;
+      const tbody = document.getElementById("studentsTableBody");
+
+      const filtered = allStudents.filter(s => {
+        const matchesSearch = s.name.toLowerCase().includes(searchVal) || s.enrollment.toLowerCase().includes(searchVal);
+        const matchesBranch = (branchVal === "all") || (s.branch === branchVal);
+        return matchesSearch && matchesBranch;
+      });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center; color:#ef4444;">No students matching criteria</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = filtered.map(s => 
+        <tr>
+          <td><strong></strong></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><span style="font-weight:bold; color:#0369a1;"></span></td>
+          <td></td>
+        </tr>
+      ).join("");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      loadStudents();
+      document.getElementById("studentSearch").addEventListener("input", renderStudentsTable);
+      document.getElementById("branchFilter").addEventListener("change", renderStudentsTable);
+    });
+  </script>
+</body>
+</html>

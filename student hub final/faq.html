@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub - Frequently Asked Questions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="container header-top">
+        <div>
+            <h1>StudentHub Portal</h1>
+            <p style="margin: 2px 0 0 0; font-size: 13px; opacity: 0.9;">Academic & Campus Activity Hub</p>
+        </div>
+        <div class="header-actions">
+            <button id="themeToggleBtn" class="theme-toggle-btn" type="button">Dark Mode</button>
+            <button id="hamburgerBtn" class="hamburger-btn" type="button" aria-label="Toggle navigation">☰ Menu</button>
+        </div>
+    </div>
+</header>
+
+<nav id="mainNav">
+    <div class="container nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="directory.html">Directory</a>
+        <a href="courses.html">Courses</a>
+        <a href="results.html">Results</a>
+        <a href="faq.html" class="active">FAQ</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="contact.html">Contact</a>
+        <a href="register.html">Register</a>
+        <a href="login.php" class="nav-btn-highlight">Login</a>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="box" style="margin-top: 20px;">
+        <h2>Frequently Asked Questions</h2>
+        <p>Click on any question below to expand or collapse the answer.</p>
+
+        <div class="faq-item" style="margin-top: 15px;">
+            <button class="faq-question">
+                <span>1. How do I register for campus events?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Browse available events on the Events page or AJAX Live CRUD page, then submit your registration details.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>2. Where can I check semester exam results?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Navigate to the Results page, enter your enrollment number and select your semester to view grade breakdowns.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>3. How does the Light/Dark mode toggle work?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Clicking the toggle button toggles the dark-theme CSS class on the body element and saves your preference in browser localStorage.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>4. How do I update my profile details?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Log in with your student credentials and visit the Profile page to update your phone number and contact information.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>5. How does asynchronous AJAX CRUD work?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>The AJAX CRUD page uses JavaScript Fetch API to communicate with PHP backend JSON endpoints (api_events.php) without full page reloads.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <p>StudentHub Portal &copy; 2026. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

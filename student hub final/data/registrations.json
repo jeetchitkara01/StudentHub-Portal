@@ -1,0 +1,12 @@
+﻿[
+  {
+    "timestamp": "2026-09-25 10:00:00",
+    "name": "Jeet Patel",
+    "enrollment": "25DCS038",
+    "department": "Computer Engineering",
+    "semester": "Semester 3",
+    "email": "jeet.p@example.com",
+    "mobile": "9876543210",
+    "gender": "Male"
+  }
+]

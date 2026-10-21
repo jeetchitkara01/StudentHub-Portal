@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentHub - Courses</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+    <header>
+    <div class="container">
+      <div class="header-top">
+        <h1>StudentHub Portal</h1>
+        <div class="header-actions">
+          <button id="themeToggleBtn" class="theme-toggle-btn" type="button">Dark Mode</button>
+          <button id="hamburgerBtn" class="hamburger-btn" type="button" aria-label="Toggle navigation">☰ Menu</button>
+        </div>
+      </div>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="directory.html">Student Directory</a>
+        <a href="register.html">Register (PHP POST)</a>
+        <a href="view_submissions.html">View Submissions</a>
+        <a href="courses.html" class="active">Courses</a>
+        <a href="results.html">Results</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Login</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <div class="box">
+      <h2>Registered Academic Courses</h2>
+      <p>List of current semester courses, credits, and faculty coordinators.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Faculty</th>
+            <th>Credits</th>
+            <th>Semester</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>CS301</strong></td>
+            <td>Data Structures and Algorithms</td>
+            <td>Prof. XYZ</td>
+            <td>4</td>
+            <td>3</td>
+            <td><span style="color:#10b981; font-weight:bold;">Active</span></td>
+          </tr>
+          <tr>
+            <td><strong>CS302</strong></td>
+            <td>Database Management Systems</td>
+            <td>Prof. XYZ</td>
+            <td>4</td>
+            <td>3</td>
+            <td><span style="color:#10b981; font-weight:bold;">Active</span></td>
+          </tr>
+          <tr>
+            <td><strong>CS303</strong></td>
+            <td>Web Technology (HTML5/CSS3/JS)</td>
+            <td>Prof. XYZ</td>
+            <td>4</td>
+            <td>3</td>
+            <td><span style="color:#10b981; font-weight:bold;">Active</span></td>
+          </tr>
+          <tr>
+            <td><strong>CS304</strong></td>
+            <td>Operating Systems</td>
+            <td>Prof. XYZ</td>
+            <td>4</td>
+            <td>3</td>
+            <td><span style="color:#10b981; font-weight:bold;">Active</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; 2026 StudentHub Portal | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
